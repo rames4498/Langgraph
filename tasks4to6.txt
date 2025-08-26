@@ -1,0 +1,41 @@
+---
+
+##  Practice Task 
+
+### Task 4: Handle multiple greeting variations
+
+ Modify the graph so that it can also detect "hello" and "hey" as valid greetings (and treat them the same as "hi").
+
+ Solution hint:
+Update choose_greeting_node so that if "hi", "hello", or "hey" appear in the input, it routes to the "hi_greeting" node.
+
+---
+
+### Task 5: Add a "shout mode" 
+
+ Add a new field "shout" (boolean) in the state.
+
+* If shout=True, the final greeting should be returned in ALL CAPS.
+* If shout=False, keep normal behavior.
+
+ Solution hint:
+Add a "shout_node" at the end that checks state["shout"] and modifies the greeting string accordingly before sending to END.
+
+---
+
+### Task 6: Track how many greetings were processed 
+
+ Add a "counter" field to the state that increments by 1 each time the graph is run.
+
+* First run → counter=1
+* Second run → counter=2
+* …and so on.
+
+ Solution hint:
+You’ll need a "counter_node" that reads the existing counter (if any) and adds 1. Place it just before the END.
+
+---
+
+
+
+---
